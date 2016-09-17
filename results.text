@@ -1,0 +1,42 @@
+results.text
+
+ENGR 3410 Computer Architecture
+Olin College Fall 2016
+proving DeMorgan's Law using Verilog Tools
+
+Name: Jee Hyun Kim
+Date: 17 September 2016
+
+~(AB) = (~A)+(~B)
+~(A+B) = ~A~B
+
+
+A B |  AB | ~(AB) 
+0 0 |  0  |   1  
+0 1 |  0  |   1  
+1 0 |  0  |   1  
+1 1 |  1  |   0  
+
+A B | ~A ~B | (~A)+(~B) 
+0 0 |  1  1 |     1  
+0 1 |  1  0 |     1  
+1 0 |  0  1 |     1  
+1 1 |  0  0 |     0  
+
+A B | A+B | ~(A+B) 
+0 0 |  0  |    1  
+0 1 |  1  |    0  
+1 0 |  1  |    0  
+1 1 |  1  |    0  
+
+A B | ~A ~B | ~A~B 
+0 0 |  1  1 |   1  
+0 1 |  1  0 |   0  
+1 0 |  0  1 |   0  
+1 1 |  0  0 |   0  
+
+A B |nA nB |AB A+B | ~(AB)  (~A)+(~B) | ~(A+B)  ~A~B |
+0 0 |1  1  |0   0  |   1        1     |    1      1  |
+0 1 |1  0  |0   1  |   1        1     |    0      0  |
+1 0 |0  1  |0   1  |   1        1     |    0      0  |
+1 1 |0  0  |1   1  |   0        0     |    0      0  |
