@@ -19,6 +19,8 @@ module demorgan
 	not Ainv(nA, A);	//takes signal A and produces signal nA
 	not Binv(nB, B);	//takes signal B and produces signal nB
 	
+
+	
 	//~(A*B)
 	wire AandB;
 	and andgate(AandB, A, B);
@@ -41,10 +43,10 @@ module demorgan
 	or orgate(AorB, A, B);
 	not AorBinv(nAorB, AorB);
 
-
-
 	//wire AorB = A | B;
 	//assign nAorB = ~AorB;
+
+
 
 	//(~A)*(~B)
 	and andgate(nAandnB, nA, nB);	//AND gate produces nAandnB from nA & nB
